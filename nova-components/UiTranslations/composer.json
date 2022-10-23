@@ -1,0 +1,30 @@
+{
+    "name": "scalemeup/ui-translations",
+    "description": "A Laravel Nova tool.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "spatie/data-transfer-object": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Scalemeup\\UiTranslations\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Scalemeup\\UiTranslations\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
