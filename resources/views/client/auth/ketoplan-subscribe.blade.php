@@ -4,7 +4,6 @@
     :url="route('subscribe.create')"/>
 
 <x-guest-layout>
-    @dd(session()->all())
     <main>
         <!--<x-client.common.page-title title="Оформление подписки"/>-->
         <section class="card-set sm:pt-28 sm:pb-16" x-data="paymentFormSend">
