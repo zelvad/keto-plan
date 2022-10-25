@@ -28,9 +28,7 @@ class SubscriptionPost3dsController extends Controller
             return $this->authUser($email);
         }
 
-        if (auth()->guest()) {
-            return redirect()->route('success-payment');
-        }
+        dd($email);
 
         return redirect()->route('dashboard');
     }
