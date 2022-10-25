@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Client\Auth\AuthCookieController;
 use App\Http\Controllers\Client\Feedback\FeedbackCreateController;
 use App\Http\Controllers\Client\Feedback\FeedbackViewController;
 use App\Http\Controllers\Client\Post\PostViewController;
@@ -45,7 +46,4 @@ Route::view('/refund', 'client.pages.refund')->name('refund');
 
 Route::get('/post/{post}', PostViewController::class)->name('post.view');
 
-// TODO: remove
-Route::get('/auth-cookie', function (\Illuminate\Http\Request $request) {
-    dd($request->cookie('email'));
-})->name('auth-cookie');
+Route::get('/auth-cookie', AuthCookieController::class)->name('auth-cookie');

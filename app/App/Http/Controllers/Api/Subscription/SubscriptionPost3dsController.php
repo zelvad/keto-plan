@@ -37,18 +37,4 @@ class SubscriptionPost3dsController extends Controller
             'paRes' => $request->get('PaRes'),
         ]);
     }
-
-    private function authUser(string $email): RedirectResponse
-    {
-        /** @var User $user */
-        $user = User::query()
-            ->where('email', $email)
-            ->first();
-
-        if ($user) {
-            Auth::login($user);
-        }
-
-        return redirect()->route('dashboard');
-    }
 }
