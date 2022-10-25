@@ -36,6 +36,7 @@ class RegisteredUserController extends Controller
 
         // TODO: refactor
         session()->put('lastForm', 'register');
+        session()->put('email', $request->get('email'));
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
