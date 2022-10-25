@@ -28,6 +28,8 @@ class SubscriptionPost3dsController extends Controller
             return $this->authUser($email);
         }
 
+        dd($email);
+
         return redirect()->route('dashboard');
     }
 
