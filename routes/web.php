@@ -44,3 +44,8 @@ Route::view('/privacy', 'client.pages.privacy')->name('privacy');
 Route::view('/refund', 'client.pages.refund')->name('refund');
 
 Route::get('/post/{post}', PostViewController::class)->name('post.view');
+
+// TODO: remove
+Route::get('/auth-cookie', function (\Illuminate\Http\Request $request) {
+    dd($request->cookie('email'));
+})->name('auth-cookie');

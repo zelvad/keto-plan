@@ -24,13 +24,7 @@ class SubscriptionPost3dsController extends Controller
 
         sleep(2);
 
-        if ($email = request()->cookie('email')) {
-            return $this->authUser($email);
-        }
-
-        dd($email);
-
-        return redirect()->route('dashboard');
+        return redirect()->route('auth-cookie');
     }
 
     /**
