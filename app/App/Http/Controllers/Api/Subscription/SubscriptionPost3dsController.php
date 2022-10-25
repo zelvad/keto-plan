@@ -24,7 +24,7 @@ class SubscriptionPost3dsController extends Controller
 
         sleep(2);
 
-        if ($email = cookie()->get('email')) {
+        if ($email = request()->cookie('email')) {
             return $this->authUser($email);
         }
 
