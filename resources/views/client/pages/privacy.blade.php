@@ -3,7 +3,7 @@
     description="Политика конфиденциальности"
     :url="request()->url()"/>
 
-<x-app-layout>
+<x-guest-layout>
     <div class="container">
         <div class="max-w-screen-lg mx-auto staticpage__wrapper mt-10 mb-10">
             <div class="page">
@@ -141,4 +141,4 @@
         }
 
     </style>
-</x-app-layout>
+</x-guest-layout>

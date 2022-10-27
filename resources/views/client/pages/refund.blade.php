@@ -3,7 +3,7 @@
     description="Условия использования"
     :url="request()->url()"/>
 
-<x-app-layout>
+<x-guest-layout>
     <div class="container">
         <div class="max-w-screen-lg mx-auto staticpage__wrapper mt-10 mb-10">
             <h1 class="text-3xl font-bold">Отмена подписки и возврат денег</h1>
@@ -18,4 +18,4 @@
             </p>
         </div>
     </div>
-</x-app-layout>
+</x-guest-layout>
