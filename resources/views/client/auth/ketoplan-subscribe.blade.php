@@ -40,7 +40,7 @@
                         <div class="w-full lg:w-1/2 px-4 form-wraper">
                             <div class="w-full mb-3 relative ">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-input" id="email" name="email" value="{{ old('email') }}" required>
+                                <input type="email" class="form-input" id="email" name="email" value="{{ old('email') ?? request()->get('email') }}" required>
                             </div>
                             <div class="w-full mb-3 relative ">
                                 <label for="" class="form-label">Имя владельца карты</label>
