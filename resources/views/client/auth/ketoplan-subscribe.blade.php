@@ -84,7 +84,7 @@
                             <label for="rules2" id="rules-text2">
                                 <span class="check-decor block mr-4"><img src="{{ asset('/images/check-icon.svg') }}" alt=""></span>
                                 <span>
-                                    Вы также ознакомлены с тем, что через {{ settings('free_days') }} дня тестового периода с Вас будет списана оплата в размере {{ settings('payment_sum_success') }} руб. и будет списываться каждые {{ settings('payment_counts_success_range') }} дней за использование нашего сервиса.
+                                    Вы также ознакомлены с тем, что через {{ settings('free_days') }} дня тестового периода с Вас будет списана оплата в размере {{ settings('payment_sum_success') }} руб. и будет списываться каждые {{ settings('payment_counts_success_range') }} дней за использование нашего сервиса или 140 руб за день доступа в личный кабинет
                                 </span>
                             </label>
                         </div>
