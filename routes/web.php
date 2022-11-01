@@ -12,8 +12,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
     'middleware' => 'auth',
+    'prefix' => 'dashboard',
 ], function (): void {
-    Route::get('/dashboard', UserDashboardController::class)
+    Route::get('/', UserDashboardController::class)
         ->name('dashboard');
 
     Route::group([

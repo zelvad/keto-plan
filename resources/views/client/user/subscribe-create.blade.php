@@ -10,8 +10,7 @@
         <section class="card-set sm:pt-28 sm:pb-16" x-data="paymentFormSend">
             <div class="content-wrapper max-w-instruction mb-36 pb-32 pt-20 md:pb-0 md:pt-0">
                 <h2 class="text-gray-100 text-2xxl sm:text-4xl font-helvetica flex flex-col sm:flex-row items-center justify-center mb-5 sm:mb-8">
-                    <span class="block mr-3 text-center order-2 sm:order-1">Получить {{ config('app.name') }} за 1 рубль </span>
-                    <img src="{{ asset('/images/logo.svg') }}" alt="logo" width="42" height="48" class="order-1 sm:order-2 mb-2 sm:mb-0">
+                    <span class="block mr-3 text-center order-2 sm:order-1">Получить план похудения за 1 рубль</span>
                 </h2>
                 <form class="" id="paymentForm" autocomplete="off">
                     <div class="flex flex-wrap -mx-4">
@@ -33,8 +32,8 @@
                                 </div>
 
                                 <picture class="block w-full mb-9" style="max-width:433px;">
-                                    <source srcset="{{ asset('/images/card-decor@2x.png') }} 2x">
-                                    <img src="{{ asset('/images/card-decor.png') }}" alt="icon" class="w-full  object-containe">
+                                    <source srcset="{{ asset('/images/ketoplan.png') }} 2x">
+                                    <img src="{{ asset('/images/ketoplan.png') }}" alt="icon" class="w-full  object-containe">
                                 </picture>
                             </div>
                         </div>
@@ -68,11 +67,20 @@
 
                     <div class="w-full mt-10">
                         <div class="checkbox-wrap flex items-center">
-                            <input type="checkbox" name="rules" id="rules" required class="hidden" checked>
+                            <input type="checkbox" name="rules" id="rules" required class="hidden" >
                             <label for="rules" id="rules-text">
                                 <span class="check-decor block mr-4"><img src="{{ asset('/images/check-icon.svg') }}" alt=""></span>
                                 <span>
-                                    Подвязав карту вы подтверждаете, что принимаете <a class="text-blue-600" target="_blank" href="{{ route('public-offer') }}">«публичную оферту»</a>, <a class="text-blue-600" target="_blank" href="{{ route('privacy') }}">«политику обработки данных»</a> и <a class="text-blue-600" target="_blank" href="{{ route('terms') }}">«условия использования и подписки»</a>.
+                                    Подвязав карту вы подтверждаете, что принимаете <a class="text-blue-600" target="_blank" href="{{ route('public-offer') }}">«публичную оферту»</a>, <a class="text-blue-600" target="_blank" href="{{ route('privacy') }}">«политику обработки данных»</a>,  и <a class="text-blue-600" target="_blank" href="{{ route('terms') }}">«условия использования и подписки»</a>.
+                                </span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap flex items-center mt-3">
+                            <input type="checkbox" name="rules2" id="rules2" required class="hidden" >
+                            <label for="rules2" id="rules-text2">
+                                <span class="check-decor block mr-4"><img src="{{ asset('/images/check-icon.svg') }}" alt=""></span>
+                                <span>
+                                    Вы также ознакомлены с тем, что через {{ settings('free_days') }} дня тестового периода с Вас будет списана оплата в размере {{ settings('payment_sum_success') }} руб. и будет списываться каждые {{ settings('payment_counts_success_range') }} дней за использование нашего сервиса или 140 руб за день доступа в личный кабинет
                                 </span>
                             </label>
                         </div>
@@ -228,6 +236,21 @@
                         } else {
                             document.getElementById('rules-text').style.color = '#000';
 
+                            reset = false;
+                        }
+
+                        if (! document.getElementById('rules').checked) {
+                            document.getElementById('rules-text').style.color = 'red';
+                            reset = true;
+                        } else {
+                            document.getElementById('rules-text').style.color = '#000';
+                            reset = false;
+                        }
+                        if (! document.getElementById('rules2').checked) {
+                            document.getElementById('rules-text2').style.color = 'red';
+                            reset = true;
+                        } else {
+                            document.getElementById('rules-text2').style.color = '#000';
                             reset = false;
                         }
 

@@ -171,6 +171,11 @@
                                                 <!---->
                                             </div>
                                         </div>
+                                        <p class="small mb-2 text-secondary opacity-75 mt-2 text-center text-center">Или</p>
+                                        <div class="col-12">
+                                            <a href="{{ route('login') }}" class="btn btn-primary w-100 quiz-btn">Войти в аккаунт</a>
+                                        </div>
+
                                         <p class="small mb-0 text-secondary opacity-75 mt-2 text-center text-md-start"> Мы рекомендуем проконсультироваться с врачом прежде, чем приступать к любой программе похудения</p>
                                     </div>
                                 </div>
