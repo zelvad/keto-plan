@@ -84,7 +84,7 @@
                             <label for="rules2" id="rules-text2">
                                 <span class="check-decor block mr-4"><img src="{{ asset('/images/check-icon.svg') }}" alt=""></span>
                                 <span>
-                                    Вы также ознакомлены с тем, что через {{ settings('free_days') }} дня тестового периода с Вас будет списана оплата в размере {{ settings('payment_sum_success') }} руб. и будет списываться каждые {{ settings('payment_counts_success_range') }} дней за использование нашего сервиса или 140 руб за день доступа в личный кабинет
+                                    Нажимая кнопку «Получить доступ» Вы подтверждаете ознакомление с автоматическими списаниями. Первое списание в размере 980₽ через 72 часа после подписки и далее, согласно <a class="text-blue-600" target="_blank" href="{{ url('tariff.pdf') }}">тарифу</a> раз в 7 дней 980₽ или 140₽ за день доступа в личный кабинет
                                 </span>
                             </label>
                         </div>
@@ -92,7 +92,7 @@
 
                     <div class="pt-12 w-full">
                         <button id="send-btn" @click="submit()" type="button" class="mx-auto flex justify-center items-center bg-pink-400 rounded-50 px-5 sm:px-24 py-3 ">
-                            <span class="text-white font-helvetica font-bold text-sm sm:text-lg w-full text-center">Получить план похудения</span>
+                            <span class="text-white font-helvetica font-bold text-sm sm:text-lg w-full text-center">Получить доступ</span>
                         </button>
                     </div>
                 </form>
