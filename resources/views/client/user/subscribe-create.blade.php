@@ -71,7 +71,7 @@
                             <label for="rules" id="rules-text">
                                 <span class="check-decor block mr-4"><img src="{{ asset('/images/check-icon.svg') }}" alt=""></span>
                                 <span>
-                                    Подвязав карту вы подтверждаете, что принимаете <a class="text-blue-600" target="_blank" href="{{ route('public-offer') }}">«публичную оферту»</a>, <a class="text-blue-600" target="_blank" href="{{ route('privacy') }}">«политику обработки данных»</a>,  и <a class="text-blue-600" target="_blank" href="{{ route('terms') }}">«условия использования и подписки»</a>.
+                                    Подвязав карту вы подтверждаете, что принимаете <a class="text-blue-600" target="_blank" href="{{ route('public-offer') }}">«публичную оферту»</a>, <a class="text-blue-600" target="_blank" href="{{ route('privacy') }}">«политику обработки данных»</a>,  и <a class="text-blue-600" target="_blank" href="{{ route('terms') }}">«условия использования и подписки»</a>  и <a class="text-blue-600" target="_blank" href="{{ url('tariff.pdf') }}">тарифами</a>.
                                 </span>
                             </label>
                         </div>
