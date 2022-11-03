@@ -1325,7 +1325,7 @@
         <vue-loader :is-loader="isLoader"></vue-loader>
     </div>
 </div>
-<script src="/land/js/bundle.js"></script>
+<script src="/land/js/bundle.js?v=1"></script>
 <script src="/land/js/anime.min.js"></script>
 <script src="/land/js/scripts.js"></script>
 
