@@ -19,7 +19,8 @@ Route::middleware('guest')->group(function () {
 
     Route::post('register', [RegisteredUserController::class, 'store']);
 
-    Route::view('fitoplan-subscribe', 'client.auth.ketoplan-subscribe');
+    Route::view('fitoplan-subscriber', 'client.auth.ketoplan-subscribe');
+    Route::view('fitoplan-subscribe', 'client.auth.ketoplan-subscribe-not');
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
