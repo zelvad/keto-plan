@@ -44,6 +44,10 @@ return [
     'binom' => [
         'subscribe_url' => env('BINOM_SUBSCRIBE_URL', 'https://tracksh.online/pbprokla.php?clickid=%s&iduser=%s&actiontype=%s&actionname=cpl'),
         'pay_url' => env('BINOM_PAY_URL', 'https://tracksh.online/pbprokla.php?clickid=%s&iduser=%s&actiontype=%s&actionname=cpa&amount=%s'),
-    ]
+    ],
+
+    'feedback_notifications' => [
+        'email' => env('FEEDBACK_NOTIFICATION_EMAIL', 'help@safevpn.com'),
+    ],
 
 ];
